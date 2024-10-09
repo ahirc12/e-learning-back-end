@@ -1,0 +1,11 @@
+{
+  "name": "e-learning-back-end",
+  "version": "1.0.0",
+  "description": "Node.js back-end for e-leaning application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahir C",
+  "license": "ISC"
+}
