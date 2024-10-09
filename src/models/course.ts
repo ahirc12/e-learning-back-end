@@ -8,14 +8,14 @@ export interface Course {
     description: string;
     instructor: User;
     videos: Video[];
-    category: Category;
+    category: string; // Category;
     enrolledStudents: User[];
 }
 
 const CourseSchema: Schema = new Schema({
     title: { type: String, required: true },
     description: { type: String, required: true, },
-    category: { type: Schema.Types.ObjectId, ref: 'Category' },
+    category: { type: String, required: true, }, // { type: Schema.Types.ObjectId, ref: 'Category' },
     instructor: { type: Schema.Types.ObjectId, ref: 'User' },
     videos: [{ type: Schema.Types.ObjectId, ref: 'Video' }],
     enrolledStudents: [{ type: Schema.Types.ObjectId, ref: 'User' }]

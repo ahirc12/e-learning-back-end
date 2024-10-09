@@ -3,9 +3,12 @@ import bodyParser from 'body-parser';
 import userRoutes from './routes/userRoutes';
 import courseRoutes from './routes/courseRoutes';
 import videoRoutes from './routes/videoRoutes';
+import connectDB from './config/db';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+connectDB();
 
 // Middleware
 app.use(bodyParser.json());
